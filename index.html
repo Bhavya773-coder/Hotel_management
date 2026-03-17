@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book comfortable monthly rooms in Jamnagar with top amenities and best prices. Experience affordable monthly stay near Reliance NAYARA.">
+    <meta name="keywords" content="monthly rooms Jamnagar, monthly stay near Reliance Jamnagar, affordable rooms Jamnagar, monthly accommodation Jamnagar, Hotel 999 Jamnagar">
+    <meta name="author" content="Monthly Rooms Jamnagar">
+    <meta property="og:title" content="Monthly Rooms Jamnagar | Affordable Monthly Stay">
+    <meta property="og:description" content="Book comfortable monthly rooms in Jamnagar with top amenities and best prices.">
+    <meta property="og:type" content="website">
+    <title>Monthly Rooms Jamnagar | Affordable Monthly Stay | Hotel 999</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Monthly Rooms</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#rooms" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="#amenities" class="nav-link">Amenities</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background" style="background-image: url('./images/Background.jpeg');">
+            <div class="hero-video-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Experience Luxury Like Never Before</h1>
+                <p class="hero-subtitle">Premium Stay in Jamnagar</p>
+            </div>
+            
+            <!-- Booking Widget -->
+            <div class="booking-widget">
+                <h3>Book Your Stay</h3>
+                <form id="booking-form" class="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="checkin">Check-in</label>
+                            <input type="date" id="checkin" name="checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout">Check-out</label>
+                            <input type="date" id="checkout" name="checkout" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Guests</label>
+                            <select id="guests" name="guests">
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Search Available Rooms</button>
+                </form>
+            </div>
+            
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="scrollToSection('contact')">Book Now</button>
+                <button class="btn-secondary" onclick="scrollToSection('rooms')">View Rooms</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Welcome to Monthly Rooms</h2>
+                <p>Where comfort meets convenience in the heart of Jamnagar</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Experience unparalleled luxury at our premium hotel in Jamnagar. Located conveniently near the Reliance Refinery and major business centers, we offer world-class amenities, exceptional service, and unforgettable experiences.</p>
+                    <p>Our commitment to excellence ensures every guest enjoys a perfect blend of traditional hospitality and modern luxury.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5★</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">150+</div>
+                        <div class="stat-label">Rooms</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10k+</div>
+                        <div class="stat-label">Happy Guests</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <div class="container">
+            <div class="section-header">
+                <h2>Monthly Rooms</h2>
+                <p>Comfortable and affordable monthly stay with all essential amenities</p>
+            </div>
+            <div class="rooms-grid" id="rooms-grid">
+                <!-- Rooms will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities">
+        <div class="container">
+            <div class="section-header">
+                <h2>World-Class Amenities</h2>
+                <p>Everything you need for a perfect stay</p>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-item">
+                    <div class="amenity-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Free WiFi</h3>
+                    <p>High-speed internet throughout the property</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3>Water Supply</h3>
+                    <p>24/7 water supply for all the rooms</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Restaurant</h3>
+                    <p>Multi-cuisine dining with expert chefs</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h3>Parking</h3>
+                    <p>Secure parking space available 24/7</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>House Keeping</h3>
+                    <p>Housekeeping and maintenance services</p>
+                </div>
+                <div class="amenity-item">
+                    <div class="amenity-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>CCTV Security</h3>
+                    <p>24/7 CCTV surveillance for your safety</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>Take a virtual tour of our luxury property</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="./images/Gallary.jpeg" alt="Grand Lobby">
+                    <div class="gallery-overlay">
+                        <h3>Grand Lobby</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="./images/Room.jpeg" alt="Deluxe Room">
+                    <div class="gallery-overlay">
+                        <h3>Deluxe Room</h3>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Guest Reviews</h2>
+                <p>What our guests say about their experience</p>
+            </div>
+            <div class="testimonials-slider" id="testimonials-slider">
+                <!-- Testimonials will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2>Prime Location</h2>
+                <p>Conveniently located in the heart of Jamnagar</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>Nearby Landmarks</h3>
+                    <ul class="landmarks">
+                        <li><i class="fas fa-map-marker-alt"></i> Reliance Refinery</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Jamnagar Airport</li>
+                        <li><i class="fas fa-map-marker-alt"></i> NAYARA Energy</li>
+                        <li><i class="fas fa-map-marker-alt"></i> GSFC</li>
+                    </ul>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-phone"></i> +91 83479 75555</p>
+                        <p><i class="fas fa-envelope"></i>booking@reliance-khavdi-jamnagar-rooms.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Khavdi, Industrial Area, Jamnagar</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.897531845!2d69.868877!3d22.3952535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395717b549996d71:0x91dab2dac265c813!2sHotel+999+In!5e0!3m2!1sen!2sin!4v1234567890"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>We're here to help you plan your perfect stay</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/maqplyoa" method="POST">
+                        <input type="hidden" name="_subject" value="New Monthly Rooms Booking Inquiry!">
+                        <input type="text" name="_gotcha" style="display:none">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-cta">
+                    <h3>Ready to Experience Luxury?</h3>
+                    <p>Book your stay now and enjoy exclusive benefits</p>
+                    <button class="btn-primary" onclick="scrollToSection('contact')">Get in Touch Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Monthly Rooms</h3>
+                    <p>Your comfortable destination for monthly accommodation in Jamnagar</p>
+                    
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91 83479 75555</li>
+                        <li><i class="fas fa-envelope"></i> booking@reliance-khavdi-jamnagar-rooms.com  </li>
+                        <li><i class="fas fa-map-marker-alt"></i>Khavdi, Industrial Area  Jamnagar-361140</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Monthly Rooms Jamnagar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Complete Your Booking</h2>
+            <form id="complete-booking-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Special Requests</label>
+                    <textarea rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
